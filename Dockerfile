@@ -9,7 +9,6 @@ ARG GITREPO=https://github.com/Abhi-1982/docker-jmeter-sample
 RUN git clone $GITREPO testplans 
 RUN chmod +x /testplans/exec-jmeter.sh
 RUN mkdir /testresults
-RUN mkdir /testrunlog
 # Add Jmeter to the Path
 ENV PATH $JMETER_HOME/bin:$PATH
 CMD ["/testplans/exec-jmeter.sh"]
